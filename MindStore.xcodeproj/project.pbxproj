@@ -13,6 +13,9 @@
 		E4D392E51DE9B95A00CDD696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D392E31DE9B95A00CDD696 /* Main.storyboard */; };
 		E4D392E71DE9B95A00CDD696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D392E61DE9B95A00CDD696 /* Assets.xcassets */; };
 		E4D392EA1DE9B95A00CDD696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D392E81DE9B95A00CDD696 /* LaunchScreen.storyboard */; };
+		E4D392F21DE9C4EC00CDD696 /* MSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D392F11DE9C4EC00CDD696 /* MSHomeViewController.swift */; };
+		E4D392F51DE9C57300CDD696 /* MSMains.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D392F41DE9C57300CDD696 /* MSMains.swift */; };
+		E4D392F81DE9C78A00CDD696 /* MSNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D392F71DE9C78A00CDD696 /* MSNetworkTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		E4D392E61DE9B95A00CDD696 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4D392E91DE9B95A00CDD696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4D392EB1DE9B95A00CDD696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4D392F11DE9C4EC00CDD696 /* MSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSHomeViewController.swift; sourceTree = "<group>"; };
+		E4D392F41DE9C57300CDD696 /* MSMains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMains.swift; sourceTree = "<group>"; };
+		E4D392F71DE9C78A00CDD696 /* MSNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSNetworkTool.swift; sourceTree = "<group>"; };
 		F2ED3DDC865506855E6DFE94 /* Pods-MindStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindStore/Pods-MindStore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,8 +90,35 @@
 				E4D392E61DE9B95A00CDD696 /* Assets.xcassets */,
 				E4D392E81DE9B95A00CDD696 /* LaunchScreen.storyboard */,
 				E4D392EB1DE9B95A00CDD696 /* Info.plist */,
+				E4D392F31DE9C52600CDD696 /* Controller */,
+				E4D392F61DE9C57A00CDD696 /* Model */,
+				E4D392F91DE9C79000CDD696 /* Tool */,
 			);
 			path = MindStore;
+			sourceTree = "<group>";
+		};
+		E4D392F31DE9C52600CDD696 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4D392F11DE9C4EC00CDD696 /* MSHomeViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E4D392F61DE9C57A00CDD696 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4D392F41DE9C57300CDD696 /* MSMains.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E4D392F91DE9C79000CDD696 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E4D392F71DE9C78A00CDD696 /* MSNetworkTool.swift */,
+			);
+			name = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +220,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B4A35A7096B254E708FFDA45 /* [CP] Copy Pods Resources */ = {
@@ -212,8 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D392F51DE9C57300CDD696 /* MSMains.swift in Sources */,
 				E4D392E21DE9B95A00CDD696 /* ViewController.swift in Sources */,
 				E4D392E01DE9B95A00CDD696 /* AppDelegate.swift in Sources */,
+				E4D392F21DE9C4EC00CDD696 /* MSHomeViewController.swift in Sources */,
+				E4D392F81DE9C78A00CDD696 /* MSNetworkTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +413,7 @@
 				E4D392F01DE9B95A00CDD696 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
