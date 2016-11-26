@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        MSNetworkTool.shareNetworkTool.loadMinds(look_back_days: 0, finished: {})
         // Do any additional setup after loading the view, typically from a nib.
     }
 

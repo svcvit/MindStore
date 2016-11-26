@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Mains: NSObject,NSCoding{
+class MSMain: NSObject,NSCoding{
     
     var title:String?
     var thumb_image:String?

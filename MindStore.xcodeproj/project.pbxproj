@@ -14,8 +14,9 @@
 		E4D392E71DE9B95A00CDD696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D392E61DE9B95A00CDD696 /* Assets.xcassets */; };
 		E4D392EA1DE9B95A00CDD696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D392E81DE9B95A00CDD696 /* LaunchScreen.storyboard */; };
 		E4D392F21DE9C4EC00CDD696 /* MSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D392F11DE9C4EC00CDD696 /* MSHomeViewController.swift */; };
-		E4D392F51DE9C57300CDD696 /* MSMains.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D392F41DE9C57300CDD696 /* MSMains.swift */; };
+		E4D392F51DE9C57300CDD696 /* MSMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D392F41DE9C57300CDD696 /* MSMain.swift */; };
 		E4D392F81DE9C78A00CDD696 /* MSNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D392F71DE9C78A00CDD696 /* MSNetworkTool.swift */; };
+		E4D392FB1DE9C9D300CDD696 /* MSConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D392FA1DE9C9D300CDD696 /* MSConst.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +30,9 @@
 		E4D392E91DE9B95A00CDD696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4D392EB1DE9B95A00CDD696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D392F11DE9C4EC00CDD696 /* MSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSHomeViewController.swift; sourceTree = "<group>"; };
-		E4D392F41DE9C57300CDD696 /* MSMains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMains.swift; sourceTree = "<group>"; };
+		E4D392F41DE9C57300CDD696 /* MSMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMain.swift; sourceTree = "<group>"; };
 		E4D392F71DE9C78A00CDD696 /* MSNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSNetworkTool.swift; sourceTree = "<group>"; };
+		E4D392FA1DE9C9D300CDD696 /* MSConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSConst.swift; sourceTree = "<group>"; };
 		F2ED3DDC865506855E6DFE94 /* Pods-MindStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindStore/Pods-MindStore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +110,7 @@
 		E4D392F61DE9C57A00CDD696 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E4D392F41DE9C57300CDD696 /* MSMains.swift */,
+				E4D392F41DE9C57300CDD696 /* MSMain.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				E4D392F71DE9C78A00CDD696 /* MSNetworkTool.swift */,
+				E4D392FA1DE9C9D300CDD696 /* MSConst.swift */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -245,9 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4D392F51DE9C57300CDD696 /* MSMains.swift in Sources */,
+				E4D392F51DE9C57300CDD696 /* MSMain.swift in Sources */,
 				E4D392E21DE9B95A00CDD696 /* ViewController.swift in Sources */,
 				E4D392E01DE9B95A00CDD696 /* AppDelegate.swift in Sources */,
+				E4D392FB1DE9C9D300CDD696 /* MSConst.swift in Sources */,
 				E4D392F21DE9C4EC00CDD696 /* MSHomeViewController.swift in Sources */,
 				E4D392F81DE9C78A00CDD696 /* MSNetworkTool.swift in Sources */,
 			);
