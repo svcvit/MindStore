@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302122B59D9FC0A42B0A953F /* Pods_MindStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA111A3FA740C6AA2FDDA457 /* Pods_MindStore.framework */; };
 		E4D392E01DE9B95A00CDD696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D392DF1DE9B95A00CDD696 /* AppDelegate.swift */; };
 		E4D392E21DE9B95A00CDD696 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D392E11DE9B95A00CDD696 /* ViewController.swift */; };
 		E4D392E51DE9B95A00CDD696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D392E31DE9B95A00CDD696 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ACBA22DF3F1346B58F30C496 /* Pods-MindStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindStore/Pods-MindStore.debug.xcconfig"; sourceTree = "<group>"; };
+		DA111A3FA740C6AA2FDDA457 /* Pods_MindStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D392DC1DE9B95A00CDD696 /* MindStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D392DF1DE9B95A00CDD696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4D392E11DE9B95A00CDD696 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		E4D392E61DE9B95A00CDD696 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4D392E91DE9B95A00CDD696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4D392EB1DE9B95A00CDD696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2ED3DDC865506855E6DFE94 /* Pods-MindStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindStore/Pods-MindStore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				302122B59D9FC0A42B0A953F /* Pods_MindStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AA33682DE18DDED41984E58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA111A3FA740C6AA2FDDA457 /* Pods_MindStore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3EDA483E4B6E8C008288FFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACBA22DF3F1346B58F30C496 /* Pods-MindStore.debug.xcconfig */,
+				F2ED3DDC865506855E6DFE94 /* Pods-MindStore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E4D392D31DE9B95A00CDD696 = {
 			isa = PBXGroup;
 			children = (
 				E4D392DE1DE9B95A00CDD696 /* MindStore */,
 				E4D392DD1DE9B95A00CDD696 /* Products */,
+				A3EDA483E4B6E8C008288FFC /* Pods */,
+				1AA33682DE18DDED41984E58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4D392EE1DE9B95A00CDD696 /* Build configuration list for PBXNativeTarget "MindStore" */;
 			buildPhases = (
+				2011056BCA735AF3362A54D4 /* [CP] Check Pods Manifest.lock */,
 				E4D392D81DE9B95A00CDD696 /* Sources */,
 				E4D392D91DE9B95A00CDD696 /* Frameworks */,
 				E4D392DA1DE9B95A00CDD696 /* Resources */,
+				02702E6FFF7B94E667AAE707 /* [CP] Embed Pods Frameworks */,
+				B4A35A7096B254E708FFDA45 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02702E6FFF7B94E667AAE707 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindStore/Pods-MindStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2011056BCA735AF3362A54D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B4A35A7096B254E708FFDA45 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindStore/Pods-MindStore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E4D392D81DE9B95A00CDD696 /* Sources */ = {
@@ -257,6 +332,7 @@
 		};
 		E4D392EF1DE9B95A00CDD696 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACBA22DF3F1346B58F30C496 /* Pods-MindStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 78U8429KE5;
@@ -270,6 +346,7 @@
 		};
 		E4D392F01DE9B95A00CDD696 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2ED3DDC865506855E6DFE94 /* Pods-MindStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 78U8429KE5;
