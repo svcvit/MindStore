@@ -13,7 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MSNetworkTool.shareNetworkTool.loadMinds(look_back_days: 0, finished: {})
+        MSNetworkTool.shareNetworkTool.loadMinds(look_back_days: 0, finished: {
+            out in
+            for item in out {
+                print (item.title!)
+            }
+    })
         // Do any additional setup after loading the view, typically from a nib.
     }
 
