@@ -7,18 +7,29 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let vc = MSHomeTableViewController()
+        self.addChildViewController(vc)
+        self.view.addSubview(vc.view)
         
-        MSNetworkTool.shareNetworkTool.loadMinds(look_back_days: 0, finished: {
+
+        MSNetworkTool.shareNetworkTool.loadMinds(look_back_days: 1, finished: {
             out in
-            for item in out {
-                print (item.title!)
-            }
-    })
+            vc.mains = out
+            vc.tableView.reloadData()
+
+        })
+        
+        
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

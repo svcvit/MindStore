@@ -19,7 +19,7 @@ class MSNetworkTool:NSObject {
     static let shareNetworkTool = MSNetworkTool()
     
     //加载Minds数据 http://mindstore.io/api/v3/lime/mind/?look_back_days=0
-    func loadMinds(look_back_days:Int,finished:@escaping (_ mains:[MSMain])->()){
+    func loadMinds(look_back_days:Int,finished:@escaping (_ mains:[MSmain])->()){
         let url = BASE_URL + "/lime/mind/?"
         let params = ["look_back_days":look_back_days] as [String:Any]
         Alamofire
@@ -33,10 +33,10 @@ class MSNetworkTool:NSObject {
                 if let value = response.result.value {
                     let json = JSON(value)
                     if let data = json["objects"].arrayObject {
-                        var mains = [MSMain]()
+                        var mains = [MSmain]()
                         
                         for dict in data {
-                            let main = MSMain(dict: dict as! [String:AnyObject])
+                            let main = MSmain(dict: dict as! [String:AnyObject])
                             mains.append(main)
                             
                         }

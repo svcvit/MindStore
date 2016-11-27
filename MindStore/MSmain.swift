@@ -8,10 +8,10 @@
 
 import Foundation
 
-class MSMain: NSObject,NSCoding{
+class MSmain: NSObject,NSCoding{
     
     var title:String?
-    var thumb_image:String?
+    var thumb_image:MSthumb_image?
     var tagline:String?
     var id:Int?
     var created_at:Int?
@@ -22,7 +22,7 @@ class MSMain: NSObject,NSCoding{
     init(dict:[String:AnyObject]) {
         super.init()
         title = dict["title"] as? String
-        thumb_image = dict["thumb_image"] as? String
+        thumb_image = MSthumb_image(dict:dict["thumb_image"] as! [String:AnyObject])
         tagline = dict["tagline"] as? String
         id = dict["id"] as? Int
         created_at = dict["created_at"] as? Int
@@ -34,7 +34,7 @@ class MSMain: NSObject,NSCoding{
     required init?(coder aDecoder:NSCoder) {
         super.init()
         title = aDecoder.decodeObject(forKey: "title") as? String
-        thumb_image = aDecoder.decodeObject(forKey: "thumb_image") as? String
+        thumb_image = aDecoder.decodeObject(forKey: "thumb_image")  as? MSthumb_image
         tagline = aDecoder.decodeObject(forKey: "tagline") as? String
         id = aDecoder.decodeObject(forKey: "id") as? Int
         created_at = aDecoder.decodeObject(forKey: "created_at") as? Int
@@ -50,5 +50,14 @@ class MSMain: NSObject,NSCoding{
         aCoder.encode(created_at, forKey: "created_at")
         aCoder.encode(vote_count, forKey: "vote_count")
         aCoder.encode(link, forKey: "link")
+    }
+}
+
+class MSthumb_image:NSObject {
+    var link:String?
+    
+    init(dict:[String:AnyObject]) {
+        super.init()
+        link = dict["link"] as? String
     }
 }
