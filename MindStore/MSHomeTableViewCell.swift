@@ -14,6 +14,7 @@ class MSHomeTableViewCell: UITableViewCell {
     
     var main:MSmain? {
         didSet {
+            
             title.text = main!.title!
             tagline.text = main!.tagline!
             thumb_image.kf.setImage(with: URL(string:NSString.https(string: main!.thumb_image!.link!)))
@@ -63,6 +64,7 @@ class MSHomeTableViewCell: UITableViewCell {
         var thumb_image = UIImageView()
         thumb_image.contentMode = .scaleAspectFill
         thumb_image.backgroundColor = UIColor.lightGray
+        thumb_image.clipsToBounds = true
         return thumb_image
     }()
     
