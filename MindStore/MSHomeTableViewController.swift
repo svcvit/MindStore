@@ -13,19 +13,14 @@ let MSHomeTableViewCellID = "MSHomeTableViewCell"
 class MSHomeTableViewController: UITableViewController {
 
     var mains = [MSmain]()
-    
+    var days:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         
         // 添加上拉刷新和下拉刷新
-//        setupRefresh()
+        setupRefresh()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     private func setupUI(){
@@ -33,8 +28,13 @@ class MSHomeTableViewController: UITableViewController {
     }
     
     private func setupRefresh(){
-        MSNetworkTool.shareNetworkTool.loadMinds(look_back_days: 0, finished: {out in
+        MSNetworkTool.shareNetworkTool.loadMinds(tableView: self.tableView,look_back_days: self.days, finished: {out in
             self.mains = out
+            self.tableView.reloadData()
+        })
+        
+        MSNetworkTool.shareNetworkTool.loadMindsMore(tableView: self.tableView, look_back_days: self.days, finished:{out in
+            self.mains += out
             self.tableView.reloadData()
         })
     }
