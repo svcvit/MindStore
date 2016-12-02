@@ -16,11 +16,23 @@ class MSHomeTableViewController: UITableViewController {
     var days:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hildTableViewExtraCellLineHidden(tableView: self.tableView)
         setupUI()
         
         // 添加上拉刷新和下拉刷新
         setupRefresh()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
 
+    }
+    
+    //隐藏空白加载的分割符
+    func hildTableViewExtraCellLineHidden(tableView : UITableView){
+        let view = UIView()
+        view.backgroundColor = UIColor.clear
+        tableView.tableFooterView = view
+        tableView.tableHeaderView = view
     }
     
     private func setupUI(){
@@ -74,6 +86,13 @@ class MSHomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let url = NSURL(string:self.mains[indexPath.row].link!) {
+            UIApplication.shared.open(url as URL)
+        }
     }
 
     /*

@@ -16,7 +16,7 @@ class MSHomeTableViewCell: UITableViewCell {
         didSet {
             title.text = main!.title!
             tagline.text = main!.tagline!
-            thumb_image.kf.setImage(with: URL(string:NSString.https(string: main!.thumb_image!.link!)))
+            thumb_image.kf.setImage(with: URL(string:main!.thumb_image!.link!+"?szhdl=imageview/1/w/175/h/175"))
             
         }
     }
@@ -52,6 +52,7 @@ class MSHomeTableViewCell: UITableViewCell {
             make.left.equalTo(thumb_image.snp.right).offset(5)
             make.top.equalTo(title.snp.bottom)
             make.right.equalTo(self).offset(-5)
+            make.bottom.lessThanOrEqualToSuperview()
             
         }
         

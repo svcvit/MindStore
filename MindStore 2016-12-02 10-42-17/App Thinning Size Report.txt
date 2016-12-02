@@ -1,0 +1,8 @@
+
+App Thinning Size Report for All Variants of MindStore
+
+Variant: MindStore-iPhone 6s Plus.ipa
+Supported devices: iPhone 6s Plus
+App + On Demand Resources size: 3.1 MB compressed, 12.2 MB uncompressed
+App size: 3.1 MB compressed, 12.2 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed

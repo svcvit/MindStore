@@ -176,8 +176,8 @@
 				TargetAttributes = {
 					E4D392DB1DE9B95A00CDD696 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 78U8429KE5;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = U4LY4RUXVY;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -395,11 +395,14 @@
 			baseConfigurationReference = ACBA22DF3F1346B58F30C496 /* Pods-MindStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 78U8429KE5;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = U4LY4RUXVY;
 				INFOPLIST_FILE = MindStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ron.MindStore;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edoctor.ios.mindstore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4433dfb2-037a-40c1-8840-7de6a0c40f53";
+				PROVISIONING_PROFILE_SPECIFIER = cn.edoctor.ios.mindstore;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -409,11 +412,14 @@
 			baseConfigurationReference = F2ED3DDC865506855E6DFE94 /* Pods-MindStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 78U8429KE5;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = U4LY4RUXVY;
 				INFOPLIST_FILE = MindStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ron.MindStore;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edoctor.ios.mindstore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4433dfb2-037a-40c1-8840-7de6a0c40f53";
+				PROVISIONING_PROFILE_SPECIFIER = cn.edoctor.ios.mindstore;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
