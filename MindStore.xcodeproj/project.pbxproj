@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		302122B59D9FC0A42B0A953F /* Pods_MindStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA111A3FA740C6AA2FDDA457 /* Pods_MindStore.framework */; };
+		E4453BCC1DF53F7D00E68E54 /* popViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4453BCB1DF53F7D00E68E54 /* popViewController.swift */; };
+		E4AA46BF1DF15D00007C8D50 /* MSUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AA46BE1DF15D00007C8D50 /* MSUITabBarController.swift */; };
+		E4AA46C11DF15DC8007C8D50 /* MSUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AA46C01DF15DC8007C8D50 /* MSUINavigationController.swift */; };
 		E4D392E01DE9B95A00CDD696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D392DF1DE9B95A00CDD696 /* AppDelegate.swift */; };
 		E4D392E21DE9B95A00CDD696 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D392E11DE9B95A00CDD696 /* ViewController.swift */; };
 		E4D392E51DE9B95A00CDD696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D392E31DE9B95A00CDD696 /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		ACBA22DF3F1346B58F30C496 /* Pods-MindStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindStore/Pods-MindStore.debug.xcconfig"; sourceTree = "<group>"; };
 		DA111A3FA740C6AA2FDDA457 /* Pods_MindStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4453BCB1DF53F7D00E68E54 /* popViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popViewController.swift; sourceTree = "<group>"; };
+		E4AA46BE1DF15D00007C8D50 /* MSUITabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSUITabBarController.swift; sourceTree = "<group>"; };
+		E4AA46C01DF15DC8007C8D50 /* MSUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSUINavigationController.swift; sourceTree = "<group>"; };
 		E4D392DC1DE9B95A00CDD696 /* MindStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D392DF1DE9B95A00CDD696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4D392E11DE9B95A00CDD696 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				E4D392FC1DE9D7A000CDD696 /* MSHomeTableViewController.swift */,
+				E4AA46BE1DF15D00007C8D50 /* MSUITabBarController.swift */,
+				E4AA46C01DF15DC8007C8D50 /* MSUINavigationController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -137,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				E4D392FE1DE9D8C600CDD696 /* MSHomeTableViewCell.swift */,
+				E4453BCB1DF53F7D00E68E54 /* popViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -269,10 +278,13 @@
 				E4D392FF1DE9D8C600CDD696 /* MSHomeTableViewCell.swift in Sources */,
 				E4D392E21DE9B95A00CDD696 /* ViewController.swift in Sources */,
 				E4D393041DEB219200CDD696 /* UIView+Extension.swift in Sources */,
+				E4453BCC1DF53F7D00E68E54 /* popViewController.swift in Sources */,
 				E4D393021DEB207400CDD696 /* NSString+Extension.swift in Sources */,
 				E4D392E01DE9B95A00CDD696 /* AppDelegate.swift in Sources */,
 				E4D392FB1DE9C9D300CDD696 /* MSConst.swift in Sources */,
+				E4AA46BF1DF15D00007C8D50 /* MSUITabBarController.swift in Sources */,
 				E4D392F81DE9C78A00CDD696 /* MSNetworkTool.swift in Sources */,
+				E4AA46C11DF15DC8007C8D50 /* MSUINavigationController.swift in Sources */,
 				E4D392FD1DE9D7A000CDD696 /* MSHomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

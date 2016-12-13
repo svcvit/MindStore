@@ -7,25 +7,36 @@
 //
 
 import UIKit
+import SnapKit
 
 let MSHomeTableViewCellID = "MSHomeTableViewCell"
 
-class MSHomeTableViewController: UITableViewController {
+class MSHomeTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     var mains = [MSmain]()
     var days:Int = 0
+    
+    var tableView:UITableView = {
+        let tableView = UITableView()
+        return tableView
+    }()
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hildTableViewExtraCellLineHidden(tableView: self.tableView)
-        setupUI()
+        tableView.dataSource = self
+        tableView.delegate = self
         
+        
+        hildTableViewExtraCellLineHidden(tableView: self.tableView)
+        self.view.addSubview(tableView)
+        setupUI()
         // 添加上拉刷新和下拉刷新
         setupRefresh()
-        
-        tableView.rowHeight = UITableViewAutomaticDimension
-
     }
+    
     
     //隐藏空白加载的分割符
     func hildTableViewExtraCellLineHidden(tableView : UITableView){
@@ -36,7 +47,16 @@ class MSHomeTableViewController: UITableViewController {
     }
     
     private func setupUI(){
+        self.definesPresentationContext = true
         tableView.register(MSHomeTableViewCell.self, forCellReuseIdentifier: MSHomeTableViewCellID)
+        
+        tableView.snp.makeConstraints{make in
+            make.height.equalTo(UIScreen.main.bounds.height)
+            make.width.equalTo(UIScreen.main.bounds.width)
+        }
+        
+        
+        
     }
     
     private func setupRefresh(){
@@ -60,19 +80,21 @@ class MSHomeTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.mains.count
         
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let main = self.mains[indexPath.row]
         
@@ -84,15 +106,19 @@ class MSHomeTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let url = NSURL(string:self.mains[indexPath.row].link!) {
-            UIApplication.shared.open(url as URL)
-        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let url = URL(string:self.mains[indexPath.row].link!) {
+//            UIApplication.shared.open(url)
+//        }
+        let pop = popViewController()
+        
+        navigationController?.pushViewController(pop, animated: true)
+        
     }
 
     /*
